@@ -57,8 +57,8 @@ class App extends Component {
       firstName,
       lastName,
       birthday,
-      email,
       phone,
+      email,
       relation
     } = contact;
     axios
@@ -98,11 +98,13 @@ class App extends Component {
             contacts={contacts}
             addContact={this.addContact}
             image={image}
+            id={contacts.id}
           /> </div>
       <div id="rotate">
           {contacts.map(contact => {
             return (
               <Contact
+                id={contact.id}
                 key={contact.id}
                 contact={contact}
                 editContact={this.editContact}

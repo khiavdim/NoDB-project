@@ -49,18 +49,27 @@ h2 {
 }
 
 button {
-    background: rgba(88, 176, 122);
     border: 0px;
-    color: white;
-    height: 25px;
-    font-family: Arial Rounded MT,Helvetica Rounded,Arial,sans-serif; 
-    font-size: 7.5pt;
 }
 
-input {
-    width: 110%;
+.edit {
+    width: 218px;
+    align-items: center;
+    border: 1px solid rgba(88, 176, 122) ;
+    margin: 1px;
+    font-size: 7pt;
+    color: darkslategray;
+    background: white
 }
 
 .names {
-    width: 43%;
+    width: 46.5%;
+    align-items: center;
+    border: 1px solid rgba(88, 176, 122) ;
+    margin: 1px;
+    font-size: 7pt;
+}
+
+i {
+    color:  rgba(88, 176, 122);
 }

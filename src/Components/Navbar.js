@@ -52,7 +52,8 @@ export default class Navbar extends Component {
       email,
       phone,
       relation,
-      image
+      image,
+      id,
     } = this.state;
     return (
       <div className="greenNav">
@@ -62,57 +63,63 @@ export default class Navbar extends Component {
             <section className="addSection">
               <div className="addDir">add a new contact below</div>
               <input
+                className="navInput"
                 value={firstName}
                 onChange={this.handleChange}
                 name="firstName"
                 placeholder="First Name"
               />
               <input
+              className="navInput"
                 value={lastName}
                 onChange={this.handleChange}
                 name="lastName"
                 placeholder="Last Name"
               />
               <input
+                className="navInput"
                 value={birthday}
                 onChange={this.handleChange}
                 name="birthday"
                 placeholder="Birthday"
               />
               <input
+              className="navInput"
                 value={phone}
                 onChange={this.handleChange}
                 name="phone"
                 placeholder="Phone"
               />
               <input
+              className="navInput"
                 value={email}
                 onChange={this.handleChange}
                 name="email"
-                placeholder=" Email"
+                placeholder="Email"
               />
               <input
+              className="navInput"
                 value={relation}
                 onChange={this.handleChange}
                 name="relation"
                 placeholder="Relation"
               />
               <input
+              className="navInput"
                 value={image}
                 onChange={this.handleChange}
                 name="image"
                 placeholder="Image URL"
               />
-              <section className="navButtons">
-                <button onClick={this.handleSubmit}>submit contact</button>
-              </section>
+              <div className="navButtons">
+                <i onClick={this.handleSubmit} className="fas fa-plus-square fa-lg" id="navIcons"></i>
+              </div>
             </section>
           ) : (
             <section className="addSection">
               <text className="addDir">successfully added contact</text>
               <br></br>
-              <button onClick={this.flipAdd}>
-              <i class="fas fa-plus-square">{" "}<text>add new contact</text></i></button>
+              <i align="right" onClick={this.flipAdd} class="fas fa-plus-square fa-lg" id="navIcons">{" "}<text className="addDir1">add contact</text></i>
             </section>
           )}
         </nav>

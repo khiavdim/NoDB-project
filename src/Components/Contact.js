@@ -27,9 +27,7 @@ export default class Contact extends Component {
   };
 
   saveEdit = e => {
-    if (e.target.value !== e.target.placeholder) {
-      this.props.editContact(this.props.contact.id, this.state);
-    }
+    this.props.editContact(this.props.contact.id, this.state);
     this.setState({ editting: false });
   };
 
@@ -60,8 +58,8 @@ export default class Contact extends Component {
                   <p>relation: {contact.relation}</p>
                 </section>
                 <section className="buttons">
-                  <button onClick={this.flipEdit}>edit</button>
-                  <button onClick={() => this.props.deleteContact(this.props.contact.id)}>delete</button>
+                  <i onClick={this.flipEdit} className="fas fa-pen-square fa-2x"></i>
+                  <i onClick={() => this.props.deleteContact(this.props.contact.id)} className="fas fa-minus-square fa-2x"></i>
                 </section>
             </div>
           ) : (
@@ -85,7 +83,7 @@ export default class Contact extends Component {
                   />
                 </p>
                 <p>
-                  <input
+                  <input className="edit"
                     value={birthday}
                     onChange={this.handleEdit}
                     name="birthday"
@@ -93,15 +91,16 @@ export default class Contact extends Component {
                   />
                 </p>
                 <p>
-                  <input
+                  <input className="edit"
                     value={phone}
+                    type="tel"
                     onChange={this.handleEdit}
                     name="phone"
                     placeholder={contact.phone}
                   />
                 </p>
                 <p>
-                  <input
+                  <input className="edit"
                     value={email}
                     onChange={this.handleEdit}
                     name="email"
@@ -109,7 +108,7 @@ export default class Contact extends Component {
                   />
                 </p>
                 <p>
-                  <input
+                  <input className="edit"
                     value={relation}
                     onChange={this.handleEdit}
                     name="relation"
@@ -117,7 +116,7 @@ export default class Contact extends Component {
                   />
                 </p>
                 <p>
-                  <input
+                  <input className="edit"
                     value={image}
                     onChange={this.handleEdit}
                     name="image"
@@ -125,8 +124,8 @@ export default class Contact extends Component {
                   />
                 </p>
                 <div className="edit_buttons">
-                  <button align="left" onClick={e => this.saveEdit(e)}>confirm edit</button>
-                  <button align="right" onClick={this.deleteContact}>delete contact</button>
+                  <i onClick={e => this.saveEdit(e)} className="fas fa-check-square fa-2x"></i>
+                  <i onClick={() => this.props.deleteContact(this.props.contact.id)} className="fas fa-minus-square fa-2x"></i>
                 </div>
             </div>
           )}
