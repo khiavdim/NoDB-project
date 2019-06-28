@@ -45,90 +45,106 @@ export default class Contact extends Component {
     } = this.state;
     return (
       <div className="contactWindow">
-          {!editting ? (
-            <div className="contactCards">
-                <section className="contactInfo">
-                  <img src={contact.image} alt={contact.firstName} />
-                  <header><h2>
-                    {contact.firstName} {contact.lastName}
-                  </h2></header>
-                  <p>birthday: {contact.birthday}</p>
-                  <p>phone number: {contact.phone}</p>
-                  <p>email: {contact.email}</p>
-                  <p>relation: {contact.relation}</p>
-                </section>
-                <section className="buttons">
-                  <i onClick={this.flipEdit} className="fas fa-pen-square fa-2x"></i>
-                  <i onClick={() => this.props.deleteContact(this.props.contact.id)} className="fas fa-minus-square fa-2x"></i>
-                </section>
-            </div>
-          ) : (
-            <div className="contactCards">
+        {!editting ? (
+          <div className="contactCards">
+            <section className="contactInfo">
               <img src={contact.image} alt={contact.firstName} />
-                <p>
-                  <input
-                    className="names"
-                    value={firstName}
-                    onChange={this.handleEdit}
-                    name="firstName"
-                    placeholder={contact.firstName}
-                  />{" "}
-                  {` `}
-                  <input
-                    className="names"
-                    value={lastName}
-                    onChange={this.handleEdit}
-                    name="lastName"
-                    placeholder={contact.lastName}
-                  />
-                </p>
-                <p>
-                  <input className="edit"
-                    value={birthday}
-                    onChange={this.handleEdit}
-                    name="birthday"
-                    placeholder={contact.birthday}
-                  />
-                </p>
-                <p>
-                  <input className="edit"
-                    value={phone}
-                    type="tel"
-                    onChange={this.handleEdit}
-                    name="phone"
-                    placeholder={contact.phone}
-                  />
-                </p>
-                <p>
-                  <input className="edit"
-                    value={email}
-                    onChange={this.handleEdit}
-                    name="email"
-                    placeholder={contact.email}
-                  />
-                </p>
-                <p>
-                  <input className="edit"
-                    value={relation}
-                    onChange={this.handleEdit}
-                    name="relation"
-                    placeholder={contact.relation}
-                  />
-                </p>
-                <p>
-                  <input className="edit"
-                    value={image}
-                    onChange={this.handleEdit}
-                    name="image"
-                    placeholder={contact.image}
-                  />
-                </p>
-                <div className="edit_buttons">
-                  <i onClick={e => this.saveEdit(e)} className="fas fa-check-square fa-2x"></i>
-                  <i onClick={() => this.props.deleteContact(this.props.contact.id)} className="fas fa-minus-square fa-2x"></i>
-                </div>
+              <header>
+                <h2>
+                  {contact.firstName} {contact.lastName}
+                </h2>
+              </header>
+              <p>birthday: {contact.birthday}</p>
+              <p>phone number: {contact.phone}</p>
+              <p>email: {contact.email}</p>
+              <p>relation: {contact.relation}</p>
+            </section>
+            <section className="buttons">
+              <i onClick={this.flipEdit} className="fas fa-pen-square fa-2x" />
+              <i
+                onClick={() => this.props.deleteContact(this.props.contact.id)}
+                className="fas fa-minus-square fa-2x"
+              />
+            </section>
+          </div>
+        ) : (
+          <div className="contactCards">
+            <img src={contact.image} alt={contact.firstName} />
+            <p>
+              <input
+                className="names"
+                value={firstName}
+                onChange={this.handleEdit}
+                name="firstName"
+                placeholder={contact.firstName}
+              />{" "}
+              {` `}
+              <input
+                className="names"
+                value={lastName}
+                onChange={this.handleEdit}
+                name="lastName"
+                placeholder={contact.lastName}
+              />
+            </p>
+            <p>
+              <input
+                className="edit"
+                value={birthday}
+                onChange={this.handleEdit}
+                name="birthday"
+                placeholder={contact.birthday}
+              />
+            </p>
+            <p>
+              <input
+                className="edit"
+                value={phone}
+                type="tel"
+                onChange={this.handleEdit}
+                name="phone"
+                placeholder={contact.phone}
+              />
+            </p>
+            <p>
+              <input
+                className="edit"
+                value={email}
+                onChange={this.handleEdit}
+                name="email"
+                placeholder={contact.email}
+              />
+            </p>
+            <p>
+              <input
+                className="edit"
+                value={relation}
+                onChange={this.handleEdit}
+                name="relation"
+                placeholder={contact.relation}
+              />
+            </p>
+            <p>
+              <input
+                className="edit"
+                value={image}
+                onChange={this.handleEdit}
+                name="image"
+                placeholder={contact.image}
+              />
+            </p>
+            <div className="edit_buttons">
+              <i
+                onClick={e => this.saveEdit(e)}
+                className="fas fa-check-square fa-2x"
+              />
+              <i
+                onClick={() => this.props.deleteContact(this.props.contact.id)}
+                className="fas fa-minus-square fa-2x"
+              />
             </div>
-          )}
+          </div>
+        )}
       </div>
     );
   }

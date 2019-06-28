@@ -1,61 +1,47 @@
 .greenNav {
-    background: rgba(88, 176, 122, 0.75);
-    height: 100vh;
-    width: 175px;
-    justify-content: center;
-    padding-top: 20px;
-    color: white;
-    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
-    position: fixed;
-    float:left;
-    z-index: 1;
+  background: rgba(88, 176, 122, 0.75);
+  height: 100vh;
+  width: 175px;
+  justify-content: center;
+  padding-top: 20px;
+  color: white;
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+  position: fixed;
+  float: left;
+  z-index: 1;
 }
-.title{
-    text-align: center;
-    font-family: 'Courgette', cursive;
-    font-size: 20pt;
+
+.addSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
 }
 
 .addDir {
-    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
-    font-size: 8pt
-}
-
-.addDir1 {
-    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
-    font-size: 7pt
-}
-
-
-.addSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 20px;
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+  font-size: 8pt;
 }
 
 .navInput {
-    width: 80%;
-    align-items: center;
-    border: 1px solid rgba(88, 176, 122) ;
-    margin: 2px;
-    font-size: 7pt;
+  width: 80%;
+  align-items: center;
+  border: 1px solid rgba(88, 176, 122);
+  margin: 2px;
+  font-size: 7pt;
 }
 
 .text {
-    font-family: Arial Rounded MT,Helvetica Rounded,Arial,sans-serif; 
-    font-size: 7pt;
-}
-
-.nav {
-    background: transparent;
+  font-family: Arial Rounded MT, Helvetica Rounded, Arial, sans-serif;
+  font-size: 7pt;
 }
 
 #navIcons {
-    color: white
+  color: white;
 }
 
-.navButtons {
-    display: inline;
+.addDir1 {
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+  font-size: 7pt;
 }

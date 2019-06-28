@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       contacts: [],
-      image: "",
+      image: ""
     };
   }
 
@@ -90,17 +90,17 @@ class App extends Component {
   };
 
   render() {
-    let { contacts, image} = this.state;
+    let { contacts, image } = this.state;
     return (
       <div>
-      <div id="nav">
+        <div className="nav">
           <Navbar
             contacts={contacts}
             addContact={this.addContact}
             image={image}
-            id={contacts.id}
-          /> </div>
-      <div id="rotate">
+          />{" "}
+        </div>
+        <div className="rotate">
           {contacts.map(contact => {
             return (
               <Contact
@@ -112,7 +112,7 @@ class App extends Component {
               />
             );
           })}
-      </div>
+        </div>
       </div>
     );
   }

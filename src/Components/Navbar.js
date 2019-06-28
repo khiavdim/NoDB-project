@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import "./Navbar.css";
-import Title from './Title'
+import Title from "./Title";
 
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       adding: true,
-      firstName:'',
-      lastName: '',
-      birthday: '',
-      email: '',
-      phone: '',
-      image: '',
-      relation: ''
-    }
+      firstName: "",
+      lastName: "",
+      birthday: "",
+      email: "",
+      phone: "",
+      image: "",
+      relation: ""
+    };
   }
 
   flipAdd = () => {
@@ -29,19 +29,18 @@ export default class Navbar extends Component {
   };
 
   handleSubmit = () => {
-      this.props.addContact(this.state)
-      this.setState({
-        firstName:'',
-        lastName: '',
-        birthday: '',
-        email: '',
-        phone: '',
-        image: '',
-        relation: '',
-        adding: false
-      })
-  }
-
+    this.props.addContact(this.state);
+    this.setState({
+      firstName: "",
+      lastName: "",
+      birthday: "",
+      email: "",
+      phone: "",
+      image: "",
+      relation: "",
+      adding: false
+    });
+  };
 
   render() {
     let {
@@ -52,8 +51,7 @@ export default class Navbar extends Component {
       email,
       phone,
       relation,
-      image,
-      id,
+      image
     } = this.state;
     return (
       <div className="greenNav">
@@ -70,7 +68,7 @@ export default class Navbar extends Component {
                 placeholder="First Name"
               />
               <input
-              className="navInput"
+                className="navInput"
                 value={lastName}
                 onChange={this.handleChange}
                 name="lastName"
@@ -84,42 +82,54 @@ export default class Navbar extends Component {
                 placeholder="Birthday"
               />
               <input
-              className="navInput"
+                className="navInput"
                 value={phone}
                 onChange={this.handleChange}
                 name="phone"
                 placeholder="Phone"
               />
               <input
-              className="navInput"
+                className="navInput"
                 value={email}
                 onChange={this.handleChange}
                 name="email"
                 placeholder="Email"
               />
               <input
-              className="navInput"
+                className="navInput"
                 value={relation}
                 onChange={this.handleChange}
                 name="relation"
                 placeholder="Relation"
               />
               <input
-              className="navInput"
+                className="navInput"
                 value={image}
                 onChange={this.handleChange}
                 name="image"
                 placeholder="Image URL"
               />
-              <div className="navButtons">
-                <i onClick={this.handleSubmit} className="fas fa-plus-square fa-lg" id="navIcons"></i>
+              <div>
+                <i
+                  onClick={this.handleSubmit}
+                  className="fas fa-plus-square fa-lg"
+                  id="navIcons"
+                />
               </div>
             </section>
           ) : (
             <section className="addSection">
               <text className="addDir">successfully added contact</text>
-              <br></br>
-              <i align="right" onClick={this.flipAdd} class="fas fa-plus-square fa-lg" id="navIcons">{" "}<text className="addDir1">add contact</text></i>
+              <br />
+              <i
+                align="right"
+                onClick={this.flipAdd}
+                className="fas fa-plus-square fa-lg"
+                id="navIcons"
+              >
+                {" "}
+                <text className="addDir1">add contact</text>
+              </i>
             </section>
           )}
         </nav>
