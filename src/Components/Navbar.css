@@ -1,0 +1,60 @@
+.greenNav {
+    background: rgba(88, 176, 122, 0.7);
+    height: 100vh;
+    width: 175px;
+    justify-content: center;
+    /* padding: 10px; */
+    /* align-items: center; */
+    padding-top: 20px;
+    margin: 0px auto;
+    display: flex;
+    position: sticky;
+    transform: rotate(90deg) translateY(-35px) translateX(30px);
+    transform-origin: right top;
+    /* position: -webkit-sticky; */
+    /* position: relative; */
+    color: white;
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+}
+
+.title{
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 20pt;
+}
+
+.addDir {
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+    font-size: 8pt
+}
+
+.navButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+}
+
+input {
+    width: 100%;
+    align-items: center;
+}
+
+.text {
+    font-family: Arial Rounded MT,Helvetica Rounded,Arial,sans-serif; 
+    font-size: 7pt;
+}
+
+.nav {
+    background: transparent;
+}
+
+i {
+    font-size: 10pt;
+}
