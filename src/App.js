@@ -44,6 +44,7 @@ class App extends Component {
         image,
         relation
       })
+
       .then(res => {
         this.setState({ contacts: res.data });
       })
@@ -91,12 +92,14 @@ class App extends Component {
   render() {
     let { contacts, image} = this.state;
     return (
-      <div id="rotate">
+      <div>
+      <div id="nav">
           <Navbar
             contacts={contacts}
             addContact={this.addContact}
             image={image}
-          />
+          /> </div>
+      <div id="rotate">
           {contacts.map(contact => {
             return (
               <Contact
@@ -107,6 +110,7 @@ class App extends Component {
               />
             );
           })}
+      </div>
       </div>
     );
   }

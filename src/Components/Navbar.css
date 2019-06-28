@@ -3,20 +3,14 @@
     height: 100vh;
     width: 175px;
     justify-content: center;
-    /* padding: 10px; */
-    /* align-items: center; */
     padding-top: 20px;
-    margin: 0px auto;
     display: flex;
-    position: sticky;
-    transform: rotate(90deg) translateY(-35px) translateX(30px);
-    transform-origin: right top;
-    /* position: -webkit-sticky; */
-    /* position: relative; */
     color: white;
     font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+    position: fixed;
+    float:left;
+    z-index: 1;
 }
-
 .title{
     text-align: center;
     font-family: 'Courgette', cursive;
