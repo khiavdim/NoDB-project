@@ -1,9 +1,6 @@
 body {
   background: url(http://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=3398&q=80)
     no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   display: flex;
   overflow-y: hidden;

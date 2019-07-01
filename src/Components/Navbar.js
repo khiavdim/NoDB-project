@@ -120,18 +120,17 @@ export default class Navbar extends Component {
           ) : (
             <section className="addSection">
               <div className="addDir">
-                successfully added<p>contact to the</p>
-                <p>beginning</p>
+                successfully added<p>contact to the end</p>
+                <p>of your booklet</p>
               </div>
-              <p> </p>
+              <p>{" "}</p>
               <i
                 align="right"
                 onClick={this.flipAdd}
                 className="fas fa-plus-square fa-lg"
                 id="navIcons"
-              >
-                {" "}
-                <div className="addDir1">add contact</div>
+              > {" "}
+                <span className="addDir1">add contact</span>
               </i>
             </section>
           )}

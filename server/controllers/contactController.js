@@ -139,7 +139,7 @@ module.exports = {
       image
     };
     id++;
-    contacts.unshift(newContact);
+    contacts.push(newContact);
     res.status(200).send(contacts);
   },
 
