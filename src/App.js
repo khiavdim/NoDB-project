@@ -98,6 +98,7 @@ class App extends Component {
             contacts={contacts}
             addContact={this.addContact}
             image={image}
+            getContact={this.getContact}
           />{" "}
         </div>
         <div className="rotate">

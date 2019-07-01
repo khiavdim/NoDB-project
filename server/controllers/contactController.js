@@ -172,4 +172,5 @@ module.exports = {
     index !== -1 && contacts.splice(index, 1);
     res.status(200).send(contacts);
   }
+  
 };
