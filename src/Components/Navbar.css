@@ -22,11 +22,14 @@
 .addDir {
   font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
   font-size: 8pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .navInput {
   width: 80%;
-  align-items: center;
   border: 1px solid rgba(88, 176, 122);
   margin: 2px;
   font-size: 7pt;

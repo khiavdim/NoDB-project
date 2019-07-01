@@ -119,8 +119,11 @@ export default class Navbar extends Component {
             </section>
           ) : (
             <section className="addSection">
-              <text className="addDir">successfully added contact</text>
-              <br />
+              <div className="addDir">
+                successfully added<p>contact to the</p>
+                <p>beginning</p>
+              </div>
+              <p> </p>
               <i
                 align="right"
                 onClick={this.flipAdd}
@@ -128,7 +131,7 @@ export default class Navbar extends Component {
                 id="navIcons"
               >
                 {" "}
-                <text className="addDir1">add contact</text>
+                <div className="addDir1">add contact</div>
               </i>
             </section>
           )}
