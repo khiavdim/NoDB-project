@@ -83,7 +83,6 @@ class App extends Component {
     axios
       .delete(`/api/contacts/${id}`)
       .then(res => {
-        console.log("res from delete");
         this.setState({ contacts: res.data });
       })
       .catch(err => console.log("Could not delete", err));

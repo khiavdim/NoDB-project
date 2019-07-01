@@ -154,7 +154,6 @@ module.exports = {
       email,
       relation
     } = req.query;
-    console.log(req.query);
     let index = contacts.findIndex(contact => contact.id === +id);
     contacts[index].image = image;
     contacts[index].firstName = firstName;
@@ -172,5 +171,4 @@ module.exports = {
     index !== -1 && contacts.splice(index, 1);
     res.status(200).send(contacts);
   }
-  
 };
