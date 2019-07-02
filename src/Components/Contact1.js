@@ -31,13 +31,10 @@ export default class Contact extends Component {
     this.setState({ editting: false });
   };
 
-  flip() {
-    document.querySelector("#cardId").classList.toggle("flip");
-  }
-
   render() {
     let { contact } = this.props;
     let {
+      editting,
       firstName,
       lastName,
       birthday,
@@ -48,8 +45,8 @@ export default class Contact extends Component {
     } = this.state;
     return (
       <div className="contactWindow">
-        <div className="allCards">
-          <div className="front">
+        {!editting ? (
+          <div className="contactCards">
             <section className="contactInfo">
               <img src={contact.image} alt={contact.firstName} />
               <header>
@@ -63,17 +60,15 @@ export default class Contact extends Component {
               <p>relation: {contact.relation}</p>
             </section>
             <section className="buttons">
-              <i className="fas fa-pen-square fa-2x">
-                <span className="text"> hover to edit</span>
-              </i>
+              <i onClick={this.flipEdit} className="fas fa-pen-square fa-2x" />
               <i
                 onClick={() => this.props.deleteContact(this.props.contact.id)}
                 className="fas fa-minus-square fa-2x"
               />
             </section>
           </div>
-
-          <div className="back">
+        ) : (
+          <div className="contactCards">
             <img src={contact.image} alt={contact.firstName} />
             <p>
               <input
@@ -138,20 +133,18 @@ export default class Contact extends Component {
                 placeholder={contact.image}
               />
             </p>
-            <div className="buttons">
+            <div className="edit_buttons">
               <i
                 onClick={e => this.saveEdit(e)}
                 className="fas fa-check-square fa-2x"
-              >
-                <span className="text"> submit changes</span>
-              </i>
+              />
               <i
                 onClick={() => this.props.deleteContact(this.props.contact.id)}
                 className="fas fa-minus-square fa-2x"
               />
             </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }

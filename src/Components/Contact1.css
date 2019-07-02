@@ -1,4 +1,5 @@
 .contactWindow {
+  height: 350px;
   transform: translate(-50%, -50%);
   color: darkslategray;
   font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
@@ -6,54 +7,18 @@
   transform: rotate(90deg) translateY(50px);
   transform-origin: right top;
   font-size: 8pt;
-  perspective: 1000px;
+  
 }
 
-.allCards {
-  height: 75vh;
-  width: 239px;
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-.front {
+.contactCards {
   background: white;
-  height: 95%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   padding: 10px;
   text-transform: lowercase;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-  left: 0;
-  z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-.back {
-  background: white;
-  height: 95%;
-  width: 95%;
-  padding: 10px;
-  text-transform: lowercase;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-  left: 0;
-  transform: rotateY(180deg);
-}
-
-.contactWindow:hover .allCards, .contactWindow:active .allCards {
-  transform: rotateY( 180deg ) ;
-  transition: transform 0.5s;
 }
 
 .contactInfo {
@@ -112,9 +77,4 @@ button {
   border: 1px solid rgba(88, 176, 122);
   margin: 1px;
   font-size: 7pt;
-}
-
-.text {
-  font-family: Arial Rounded MT ,Helvetica Rounded, Arial, sans-serif;
-  font-size: 7pt
 }

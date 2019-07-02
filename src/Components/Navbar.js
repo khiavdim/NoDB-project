@@ -110,11 +110,10 @@ export default class Navbar extends Component {
                 placeholder="Image URL"
               />
               <div>
-                <i
+                <button
                   onClick={this.handleSubmit}
-                  className="fas fa-plus-square fa-lg"
-                  id="navIcons"
-                />
+                  id="navIcons">add new contact
+                </button>
               </div>
             </section>
           ) : (
@@ -123,15 +122,14 @@ export default class Navbar extends Component {
                 successfully added<p>contact to the end</p>
                 <p>of your booklet</p>
               </div>
-              <p>{" "}</p>
-              <i
+              <p>&emsp;</p>
+              <button 
                 align="right"
                 onClick={this.flipAdd}
-                className="fas fa-plus-square fa-lg"
-                id="navIcons"
+                id="navIcons1"
               > {" "}
-                <span className="addDir1">add contact</span>
-              </i>
+                add another contact
+              </button>
             </section>
           )}
         </nav>
