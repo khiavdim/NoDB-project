@@ -3,73 +3,73 @@
   color: darkslategray;
   font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
   display: flex;
-  transform: rotate(90deg) translateY(50px);
+  transform: rotate(90deg) translateY(100px) translateX(150px);
   transform-origin: right top;
-  font-size: 8pt;
+  font-size: 15pt;
   perspective: 1000px;
+  height: 71vh;
+  width: 27vw;
 }
 
 .allCards {
-  height: 75vh;
-  width: 239px;
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	position: relative;
+  height: 100%;
+  width: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
 .front {
   background: white;
-  height: 95%;
-  width: 95%;
-  padding: 10px;
+  height: 100%;
+  width: 100%;
+  padding: .75rem;
   text-transform: lowercase;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   backface-visibility: hidden;
-	position: absolute;
-	top: 0;
+  position: absolute;
+  top: 0;
   left: 0;
   z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .back {
   background: white;
-  height: 95%;
-  width: 95%;
-  padding: 10px;
+  height: 100%;
+  width: 100%;
+  padding: .75rem;
   text-transform: lowercase;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   backface-visibility: hidden;
-	position: absolute;
-	top: 0;
+  position: absolute;
+  top: 0;
   left: 0;
   transform: rotateY(180deg);
 }
 
-.contactWindow:hover .allCards, .contactWindow:active .allCards {
-  transform: rotateY( 180deg ) ;
+.contactWindow:hover .allCards,
+.contactWindow:active .allCards {
+  transform: rotateY(180deg);
   transition: transform 0.5s;
 }
 
 .contactInfo {
-  justify-content: space-evenly;
-  line-height: 23px;
+  line-height: 2.7em;
 }
 
 img {
-  width: 225px;
-  height: 152px;
+  width: 100%;
+  max-height: 100%;
 }
 
 h2 {
-  font-size: 13pt;
+  font-size: 30pt;
   text-transform: lowercase;
-  line-height: 40px;
   color: rgba(88, 176, 122);
   font-family: "Courgette", cursive;
 }
@@ -97,24 +97,24 @@ button {
 }
 
 .edit {
-  width: 218px;
+  width: 98%;
   align-items: center;
   border: 1px solid rgba(88, 176, 122);
   margin: 1px;
-  font-size: 7pt;
+  font-size: 16pt;
   color: darkslategray;
   background: white;
 }
 
 .names {
-  width: 46.5%;
+  width: 48%;
   align-items: center;
   border: 1px solid rgba(88, 176, 122);
   margin: 1px;
-  font-size: 7pt;
+  font-size: 16pt;
 }
 
 .text {
-  font-family: Arial Rounded MT ,Helvetica Rounded, Arial, sans-serif;
-  font-size: 7pt
+  font-family: Arial Rounded MT, Helvetica Rounded, Arial, sans-serif;
+  font-size: 7pt;
 }
